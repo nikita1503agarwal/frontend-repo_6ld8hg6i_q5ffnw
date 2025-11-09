@@ -6,7 +6,7 @@ const projects = [
     title: 'Onboarding Flow Revamp',
     type: 'Explainer',
     industry: 'Analytics',
-    logo: 'https://dummyimage.com/80x24/ffffff/000000&text=DataPulse',
+    logo: 'https://dummyimage.com/96x28/ffffff/000000&text=DataPulse',
     before: { conversion: 22, tickets: 100 },
     after: { conversion: 41, tickets: 58 },
     video: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -17,7 +17,7 @@ const projects = [
     title: 'Feature Adoption Sprint',
     type: 'Demo',
     industry: 'Fintech',
-    logo: 'https://dummyimage.com/80x24/ffffff/000000&text=LedgerIQ',
+    logo: 'https://dummyimage.com/96x28/ffffff/000000&text=LedgerIQ',
     before: { adoption: 18 },
     after: { adoption: 47 },
     video: 'https://www.w3schools.com/html/movie.mp4',
@@ -28,7 +28,7 @@ const projects = [
     title: 'Support Deflection Series',
     type: 'Motion Graphics',
     industry: 'DevTools',
-    logo: 'https://dummyimage.com/80x24/ffffff/000000&text=ShipKit',
+    logo: 'https://dummyimage.com/96x28/ffffff/000000&text=ShipKit',
     before: { tickets: 100 },
     after: { tickets: 60 },
     video: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -44,9 +44,9 @@ const Portfolio = () => {
   const filtered = active === 'All' ? projects : projects.filter(p => p.type === active);
 
   return (
-    <section id="portfolio" className="w-full bg-black py-20 text-white">
+    <section id="portfolio" className="w-full bg-black py-28 text-white">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+        <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
           <h2 className="text-3xl font-bold sm:text-4xl">Selected Work & Outcomes</h2>
           <div className="flex flex-wrap items-center gap-2">
             {filters.map(f => (
@@ -61,9 +61,9 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3">
           {filtered.map(p => (
-            <div key={p.id} className="group overflow-hidden rounded-xl border border-white/10 bg-white/5">
+            <div key={p.id} className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5">
               <div className="relative aspect-video w-full overflow-hidden">
                 <video
                   src={p.video}
@@ -77,9 +77,9 @@ const Portfolio = () => {
                 />
                 <img src={p.logo} alt="client" className="absolute left-3 top-3 h-5 opacity-90" />
               </div>
-              <div className="space-y-3 p-4">
+              <div className="space-y-4 p-5">
                 <h3 className="text-lg font-semibold">{p.title}</h3>
-                <div className="grid grid-cols-2 gap-3 text-xs">
+                <div className="grid grid-cols-2 gap-4 text-xs">
                   {p.before.conversion !== undefined && (
                     <div className="rounded-lg bg-red-500/10 p-3 text-red-300">
                       <div className="font-semibold">Before</div>
